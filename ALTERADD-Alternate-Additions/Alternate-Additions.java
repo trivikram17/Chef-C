@@ -1,31 +1,22 @@
 import java.util.*;
-import java.lang.*;
-import java.io.*;
 
-class Codechef
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		// your code goes here
-		Scanner sc= new Scanner(System.in);
-		int t= sc.nextInt();
-		while(t-- >0){
-		    int a=sc.nextInt();
-		    int b=sc.nextInt();
-		    
-		    while(a<b){
-		        if(a%2==0){
-		            a=a+2;
-		        }else{
-		            a=a+1;
-		        }
-		    }
-		    if(a==b){
-		        System.out.println("yes");
-		    }else{
-		        System.out.println("no");
-		    }
-		}
+class Codechef {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
 
-	}
+        while (t-- > 0) {
+            long a = sc.nextLong();
+            long b = sc.nextLong();
+
+            long diff = b - a;
+
+            // same logic as your loop, just jumped
+            if (diff % 3 == 2) {
+                System.out.println("NO");
+            } else {
+                System.out.println("YES");
+            }
+        }
+    }
 }
